@@ -33,43 +33,29 @@ def calculate():
 
 # Create the main window
 root = tk.Tk()
+root.geometry("700x280")
 root.title("Quadratic Equation Solver")
 
-# Set the width and height of the window
-window_width = 700
-window_height = 280
-root.geometry(f"{window_width}x{window_height}")
-
 # Create labels and entry widgets for coefficients
-label_a = tk.Label(root, text="a:")
-label_a.grid(row=0, column=0, sticky="e")
-
 entry_a = tk.Entry(root, width=5)
-entry_a.grid(row=0, column=1, sticky="w")
+entry_a.grid(row=0, column=1)
 
-label_b = tk.Label(root, text="x² +")
+label_b = tk.Label(root, text="x**2")
 label_b.grid(row=0, column=2)
-
 entry_b = tk.Entry(root, width=5)
 entry_b.grid(row=0, column=3)
 
-label_c = tk.Label(root, text="x +")
+label_c = tk.Label(root, text="x+")
 label_c.grid(row=0, column=4)
-
 entry_c = tk.Entry(root, width=5)
 entry_c.grid(row=0, column=5)
 
-label_equal = tk.Label(root, text="= 0")
-label_equal.grid(row=0, column=6)
+label_c = tk.Label(root, text="=0")
+label_c.grid(row=0, column=6)
 
 # Create a button to calculate the roots
 calculate_button = tk.Button(root, text="Calculate", command=calculate)
-calculate_button.grid(row=0, column=7, padx=5, pady=5, sticky="w")
-
-# Configure grid to stretch content
-for i in range(8):
-    root.grid_columnconfigure(i, weight=1)
-root.grid_rowconfigure(0, weight=1)
+calculate_button.grid(row=0, column=7, padx=5, pady=5)
 
 # Start the Tkinter event loop
 root.mainloop()

@@ -21,7 +21,8 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="tk_practice.py" />
+    <Compile Include="module1.py" />
+    <Compile Include="tk_practice.txt" />
     <Compile Include="tk_1.py" />
   </ItemGroup>
   <ItemGroup>
